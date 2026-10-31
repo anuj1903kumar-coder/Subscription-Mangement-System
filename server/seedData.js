@@ -1,0 +1,614 @@
+export const initialSeedData = {
+  users: [
+    {
+      id: "usr_admin_01",
+      email: "admin@brightloop.com",
+      password: "Brightloop#2026",
+      name: "Elena Vance",
+      role: "admin",
+      department: "Executive Management",
+      company: "Brightloop Software Corp.",
+      createdAt: "2026-01-01T09:00:00Z"
+    },
+    {
+      id: "usr_staff_01",
+      email: "staff@brightloop.com",
+      password: "Brightloop#Staff1",
+      name: "Marcus Brody",
+      role: "staff",
+      department: "Sales & Client Operations",
+      company: "Brightloop Software Corp.",
+      createdAt: "2026-01-10T10:00:00Z"
+    },
+    {
+      id: "usr_cust_01",
+      email: "customer1@apexretail.com",
+      password: "Customer#Apex1",
+      name: "David Sterling",
+      role: "customer",
+      company: "Apex Retail Group",
+      phone: "+1 (555) 392-1084",
+      billingAddress: "450 Broadway Ave, Suite 1200, New York, NY 10013",
+      createdAt: "2026-01-15T11:20:00Z"
+    },
+    {
+      id: "usr_cust_02",
+      email: "customer2@artisanbrew.com",
+      password: "Customer#Brew1",
+      name: "Sarah Jenkins",
+      role: "customer",
+      company: "Artisan Coffee Roasters",
+      phone: "+1 (555) 782-9931",
+      billingAddress: "847 Market St, Seattle, WA 98101",
+      createdAt: "2026-02-01T14:10:00Z"
+    },
+    {
+      id: "usr_cust_03",
+      email: "customer3@nimbuscloud.io",
+      password: "Customer#Nimbus1",
+      name: "Liam Chen",
+      role: "customer",
+      company: "Nimbus Cloud Tech",
+      phone: "+1 (555) 438-6620",
+      billingAddress: "220 Silicon Way, Austin, TX 78701",
+      createdAt: "2026-03-12T16:45:00Z"
+    }
+  ],
+
+  products: [
+    {
+      id: "PROD-001",
+      name: "Brightloop Core ERP",
+      type: "Software",
+      salesPrice: 1200,
+      costPrice: 400,
+      notes: "Unified enterprise resource planning suite for inventory, finance, and operations.",
+      variants: [
+        { id: "var_erp_std", name: "Standard Edition", priceDelta: 0, description: "Default cloud hosted ERP" },
+        { id: "var_erp_odoo", name: "Odoo Brand Edition", priceDelta: 560, description: "Official Odoo ERP ecosystem integration with bi-directional sync (adds $560)" },
+        { id: "var_erp_ent", name: "Enterprise Multi-Region", priceDelta: 850, description: "Multi-tenant isolated VPC cluster with high availability" }
+      ],
+      createdAt: "2026-01-01T08:00:00Z"
+    },
+    {
+      id: "PROD-002",
+      name: "Brightloop CRM Pro",
+      type: "Software",
+      salesPrice: 450,
+      costPrice: 120,
+      notes: "Complete customer relationship management, sales pipeline, and automated deal scoring.",
+      variants: [
+        { id: "var_crm_std", name: "Standard Edition", priceDelta: 0, description: "Core CRM features" },
+        { id: "var_crm_odoo", name: "Odoo Brand Sync", priceDelta: 560, description: "Native Odoo CRM bridge module with live quotation push (adds $560)" }
+      ],
+      createdAt: "2026-01-01T08:00:00Z"
+    },
+    {
+      id: "PROD-003",
+      name: "Advanced BI & Analytics Add-on",
+      type: "Add-on",
+      salesPrice: 250,
+      costPrice: 50,
+      notes: "Predictive cash flow modeling, cohort retention, and executive board dashboards.",
+      variants: [
+        { id: "var_bi_std", name: "Default", priceDelta: 0, description: "Real-time analytics engine" }
+      ],
+      createdAt: "2026-01-05T09:00:00Z"
+    },
+    {
+      id: "PROD-004",
+      name: "Multi-Warehouse Inventory Add-on",
+      type: "Add-on",
+      salesPrice: 350,
+      costPrice: 90,
+      notes: "Multi-location inventory tracking, barcoding, batch expiration, and dispatch logistics.",
+      variants: [
+        { id: "var_wh_std", name: "Default", priceDelta: 0, description: "Multi-warehouse module" }
+      ],
+      createdAt: "2026-01-05T09:00:00Z"
+    },
+    {
+      id: "PROD-005",
+      name: "Dedicated 24/7 SLA Support",
+      type: "Service",
+      salesPrice: 500,
+      costPrice: 180,
+      notes: "Direct senior solutions engineer hotline, 15-minute response SLA, and disaster recovery.",
+      variants: [
+        { id: "var_sla_std", name: "Enterprise SLA", priceDelta: 0, description: "24/7 dedicated escalation channel" }
+      ],
+      createdAt: "2026-01-10T10:00:00Z"
+    }
+  ],
+
+  plans: [
+    {
+      id: "PLAN-001",
+      name: "Monthly Starter Plan",
+      cost: 49,
+      billingFrequency: "monthly",
+      minQuantity: 1,
+      availableFrom: "2026-01-01",
+      availableTo: "2027-12-31",
+      autoCloseOnEnd: false,
+      canCloseEarly: true,
+      canPause: true,
+      canRenew: true,
+      description: "Ideal for fast-moving startups and boutique stores billed each month."
+    },
+    {
+      id: "PLAN-002",
+      name: "Annual Business Growth Plan",
+      cost: 490,
+      billingFrequency: "yearly",
+      minQuantity: 5,
+      availableFrom: "2026-01-01",
+      availableTo: "2027-12-31",
+      autoCloseOnEnd: false,
+      canCloseEarly: true,
+      canPause: true,
+      canRenew: true,
+      description: "Discounted annual billing contract for growing mid-sized enterprises."
+    },
+    {
+      id: "PLAN-003",
+      name: "Enterprise Custom Annual",
+      cost: 3800,
+      billingFrequency: "yearly",
+      minQuantity: 10,
+      availableFrom: "2026-01-01",
+      availableTo: "2028-12-31",
+      autoCloseOnEnd: false,
+      canCloseEarly: false,
+      canPause: true,
+      canRenew: true,
+      description: "Full suite agreement with locked annual terms and high SLA commitments."
+    },
+    {
+      id: "PLAN-004",
+      name: "Sprint Sandbox Weekly",
+      cost: 35,
+      billingFrequency: "weekly",
+      minQuantity: 1,
+      availableFrom: "2026-01-01",
+      availableTo: "2026-12-31",
+      autoCloseOnEnd: true,
+      canCloseEarly: true,
+      canPause: false,
+      canRenew: false,
+      description: "Short-term development and staging subscription. Automatically closes on completion."
+    },
+    {
+      id: "PLAN-005",
+      name: "Special Event Daily Pass",
+      cost: 15,
+      billingFrequency: "daily",
+      minQuantity: 1,
+      availableFrom: "2026-01-01",
+      availableTo: "2026-12-31",
+      autoCloseOnEnd: true,
+      canCloseEarly: true,
+      canPause: false,
+      canRenew: false,
+      description: "Single-day access for trade shows, warehouse count weekends, and audit days."
+    }
+  ],
+
+  quotationTemplates: [
+    {
+      id: "TMPL-001",
+      name: "SME Standard Quick-Start",
+      planId: "PLAN-001",
+      validityDays: 30,
+      description: "Pre-configured for small shops needing Core ERP with Analytics.",
+      lines: [
+        { productId: "PROD-001", variantId: "var_erp_std", quantity: 2, unitPrice: 1200 },
+        { productId: "PROD-003", variantId: "var_bi_std", quantity: 1, unitPrice: 250 }
+      ]
+    },
+    {
+      id: "TMPL-002",
+      name: "Enterprise Odoo Ecosystem Suite",
+      planId: "PLAN-002",
+      validityDays: 45,
+      description: "Turnkey enterprise package featuring Odoo brand editions and 24/7 SLA.",
+      lines: [
+        { productId: "PROD-001", variantId: "var_erp_odoo", quantity: 10, unitPrice: 1760 },
+        { productId: "PROD-002", variantId: "var_crm_odoo", quantity: 10, unitPrice: 1010 },
+        { productId: "PROD-005", variantId: "var_sla_std", quantity: 1, unitPrice: 500 }
+      ]
+    },
+    {
+      id: "TMPL-003",
+      name: "Supply Chain & Warehouse Special",
+      planId: "PLAN-001",
+      validityDays: 20,
+      description: "Optimized for distributors with multi-location inventory requirements.",
+      lines: [
+        { productId: "PROD-001", variantId: "var_erp_std", quantity: 5, unitPrice: 1200 },
+        { productId: "PROD-004", variantId: "var_wh_std", quantity: 3, unitPrice: 350 }
+      ]
+    }
+  ],
+
+  taxes: [
+    {
+      id: "TAX-001",
+      name: "Standard US Sales Tax (8.25%)",
+      rate: 8.25,
+      isDefault: true,
+      code: "ST-8.25",
+      notes: "Applicable to software as a service in standard domestic jurisdictions."
+    },
+    {
+      id: "TAX-002",
+      name: "EU Value Added Tax (VAT 20%)",
+      rate: 20.0,
+      isDefault: false,
+      code: "VAT-20",
+      notes: "Cross-border B2B digital services tax across member states."
+    },
+    {
+      id: "TAX-003",
+      name: "Goods & Services Tax (GST 18%)",
+      rate: 18.0,
+      isDefault: false,
+      code: "GST-18",
+      notes: "Technology and cloud infrastructure standard rate."
+    },
+    {
+      id: "TAX-004",
+      name: "Tax Exempt (0%)",
+      rate: 0.0,
+      isDefault: false,
+      code: "EXEMPT-0",
+      notes: "Registered nonprofit or authorized wholesale resale certificate."
+    }
+  ],
+
+  discounts: [
+    {
+      id: "DISC-001",
+      code: "VOLUME15",
+      name: "Enterprise Seat Expansion (15% Off)",
+      type: "percentage",
+      value: 15,
+      scope: "whole_subscription",
+      minQuantity: 10,
+      minPurchaseAmount: 0,
+      startDate: "2026-01-01",
+      endDate: "2026-12-31",
+      maxUses: 50,
+      timesUsed: 14,
+      status: "active",
+      notes: "Applies 15% discount across the whole subscription for contracts with 10+ seats."
+    },
+    {
+      id: "DISC-002",
+      code: "WELCOME200",
+      name: "New Business Credit ($200 Flat)",
+      type: "fixed",
+      value: 200,
+      scope: "whole_subscription",
+      minQuantity: 1,
+      minPurchaseAmount: 1000,
+      startDate: "2026-01-01",
+      endDate: "2026-12-31",
+      maxUses: 30,
+      timesUsed: 19,
+      status: "active",
+      notes: "Flat $200 discount for new contracts over $1,000."
+    },
+    {
+      id: "DISC-003",
+      code: "ODOO10",
+      name: "Odoo Suite Upgrade Rebate (10% Off Product)",
+      type: "percentage",
+      value: 10,
+      scope: "specific_product",
+      targetProductId: "PROD-001",
+      minQuantity: 1,
+      minPurchaseAmount: 0,
+      startDate: "2026-01-01",
+      endDate: "2026-12-31",
+      maxUses: 100,
+      timesUsed: 35,
+      status: "active",
+      notes: "10% price discount applied directly to the Brightloop Core ERP line."
+    }
+  ],
+
+  subscriptions: [
+    {
+      id: "SUB-2026-0001",
+      customerId: "usr_cust_01",
+      customerName: "David Sterling",
+      customerEmail: "customer1@apexretail.com",
+      company: "Apex Retail Group",
+      planId: "PLAN-002",
+      planName: "Annual Business Growth Plan",
+      billingFrequency: "yearly",
+      status: "Active", // Draft, Quotation, Confirmed, Active, Closed, Paused
+      startDate: "2026-01-15",
+      expiryDate: "2027-01-15",
+      paymentTerms: "Net 30",
+      lastBilledDate: "2026-01-15",
+      nextBillingDate: "2027-01-15",
+      taxId: "TAX-001",
+      discountCode: "VOLUME15",
+      lines: [
+        {
+          id: "line_sub1_1",
+          productId: "PROD-001",
+          productName: "Brightloop Core ERP",
+          variantId: "var_erp_odoo",
+          variantName: "Odoo Brand Edition",
+          quantity: 10,
+          unitPrice: 1760, // 1200 + 560
+          taxRate: 8.25,
+          subtotal: 17600
+        },
+        {
+          id: "line_sub1_2",
+          productId: "PROD-002",
+          productName: "Brightloop CRM Pro",
+          variantId: "var_crm_odoo",
+          variantName: "Odoo Brand Sync",
+          quantity: 10,
+          unitPrice: 1010, // 450 + 560
+          taxRate: 8.25,
+          subtotal: 10100
+        },
+        {
+          id: "line_sub1_3",
+          productId: "PROD-005",
+          productName: "Dedicated 24/7 SLA Support",
+          variantId: "var_sla_std",
+          variantName: "Enterprise SLA",
+          quantity: 1,
+          unitPrice: 500,
+          taxRate: 8.25,
+          subtotal: 500
+        }
+      ],
+      createdAt: "2026-01-15T10:00:00Z"
+    },
+    {
+      id: "SUB-2026-0002",
+      customerId: "usr_cust_02",
+      customerName: "Sarah Jenkins",
+      customerEmail: "customer2@artisanbrew.com",
+      company: "Artisan Coffee Roasters",
+      planId: "PLAN-001",
+      planName: "Monthly Starter Plan",
+      billingFrequency: "monthly",
+      status: "Active",
+      startDate: "2026-08-01",
+      expiryDate: "2027-08-01",
+      paymentTerms: "Net 15",
+      lastBilledDate: "2026-09-30",
+      nextBillingDate: "2026-10-31", // DUE FOR BILLING ON BILLING DAY!
+      taxId: "TAX-001",
+      discountCode: null,
+      lines: [
+        {
+          id: "line_sub2_1",
+          productId: "PROD-001",
+          productName: "Brightloop Core ERP",
+          variantId: "var_erp_std",
+          variantName: "Standard Edition",
+          quantity: 2,
+          unitPrice: 1200,
+          taxRate: 8.25,
+          subtotal: 2400
+        },
+        {
+          id: "line_sub2_2",
+          productId: "PROD-003",
+          productName: "Advanced BI & Analytics Add-on",
+          variantId: "var_bi_std",
+          variantName: "Default",
+          quantity: 1,
+          unitPrice: 250,
+          taxRate: 8.25,
+          subtotal: 250
+        }
+      ],
+      createdAt: "2026-08-01T12:00:00Z"
+    },
+    {
+      id: "SUB-2026-0003",
+      customerId: "usr_cust_03",
+      customerName: "Liam Chen",
+      customerEmail: "customer3@nimbuscloud.io",
+      company: "Nimbus Cloud Tech",
+      planId: "PLAN-001",
+      planName: "Monthly Starter Plan",
+      billingFrequency: "monthly",
+      status: "Quotation", // Currently in Quotation stage
+      startDate: "2026-11-01",
+      expiryDate: "2027-11-01",
+      paymentTerms: "Due on Receipt",
+      lastBilledDate: null,
+      nextBillingDate: "2026-11-01",
+      taxId: "TAX-001",
+      discountCode: "WELCOME200",
+      lines: [
+        {
+          id: "line_sub3_1",
+          productId: "PROD-001",
+          productName: "Brightloop Core ERP",
+          variantId: "var_erp_std",
+          variantName: "Standard Edition",
+          quantity: 4,
+          unitPrice: 1200,
+          taxRate: 8.25,
+          subtotal: 4800
+        },
+        {
+          id: "line_sub3_2",
+          productId: "PROD-004",
+          productName: "Multi-Warehouse Inventory Add-on",
+          variantId: "var_wh_std",
+          variantName: "Default",
+          quantity: 2,
+          unitPrice: 350,
+          taxRate: 8.25,
+          subtotal: 700
+        }
+      ],
+      createdAt: "2026-10-25T14:30:00Z"
+    },
+    {
+      id: "SUB-2026-0004",
+      customerId: "usr_cust_01",
+      customerName: "David Sterling",
+      customerEmail: "customer1@apexretail.com",
+      company: "Apex Retail Group",
+      planId: "PLAN-003",
+      planName: "Enterprise Custom Annual",
+      billingFrequency: "yearly",
+      status: "Draft",
+      startDate: "2026-12-01",
+      expiryDate: "2027-12-01",
+      paymentTerms: "Net 30",
+      lastBilledDate: null,
+      nextBillingDate: "2026-12-01",
+      taxId: "TAX-001",
+      discountCode: null,
+      lines: [
+        {
+          id: "line_sub4_1",
+          productId: "PROD-001",
+          productName: "Brightloop Core ERP",
+          variantId: "var_erp_ent",
+          variantName: "Enterprise Multi-Region",
+          quantity: 12,
+          unitPrice: 2050,
+          taxRate: 8.25,
+          subtotal: 24600
+        }
+      ],
+      createdAt: "2026-10-28T09:15:00Z"
+    }
+  ],
+
+  invoices: [
+    {
+      id: "INV-2026-0001",
+      invoiceNumber: "INV-2026-0001",
+      subscriptionId: "SUB-2026-0001",
+      customerId: "usr_cust_01",
+      customerName: "David Sterling",
+      customerEmail: "customer1@apexretail.com",
+      company: "Apex Retail Group",
+      billingAddress: "450 Broadway Ave, Suite 1200, New York, NY 10013",
+      status: "Paid", // Draft, Confirmed, Paid, Cancelled
+      issueDate: "2026-01-15",
+      dueDate: "2026-02-15",
+      paymentTerms: "Net 30",
+      periodStart: "2026-01-15",
+      periodEnd: "2027-01-15",
+      subtotal: 28200.00,
+      discountAmount: 4230.00, // 15% off whole sub
+      discountCode: "VOLUME15",
+      taxRate: 8.25,
+      taxAmount: 1977.53,
+      totalAmount: 25947.53,
+      amountPaid: 25947.53,
+      balanceDue: 0.00,
+      lines: [
+        { description: "Brightloop Core ERP (Odoo Brand Edition)", quantity: 10, unitPrice: 1760.00, amount: 17600.00 },
+        { description: "Brightloop CRM Pro (Odoo Brand Sync)", quantity: 10, unitPrice: 1010.00, amount: 10100.00 },
+        { description: "Dedicated 24/7 SLA Support (Enterprise SLA)", quantity: 1, unitPrice: 500.00, amount: 500.00 }
+      ],
+      createdAt: "2026-01-15T10:05:00Z"
+    },
+    {
+      id: "INV-2026-0002",
+      invoiceNumber: "INV-2026-0002",
+      subscriptionId: "SUB-2026-0002",
+      customerId: "usr_cust_02",
+      customerName: "Sarah Jenkins",
+      customerEmail: "customer2@artisanbrew.com",
+      company: "Artisan Coffee Roasters",
+      billingAddress: "847 Market St, Seattle, WA 98101",
+      status: "Confirmed", // Unpaid & OVERDUE (due date was 2026-10-15)
+      issueDate: "2026-09-30",
+      dueDate: "2026-10-15",
+      paymentTerms: "Net 15",
+      periodStart: "2026-10-01",
+      periodEnd: "2026-10-31",
+      subtotal: 2650.00,
+      discountAmount: 0.00,
+      discountCode: null,
+      taxRate: 8.25,
+      taxAmount: 218.63,
+      totalAmount: 2868.63,
+      amountPaid: 0.00,
+      balanceDue: 2868.63,
+      lines: [
+        { description: "Brightloop Core ERP (Standard Edition)", quantity: 2, unitPrice: 1200.00, amount: 2400.00 },
+        { description: "Advanced BI & Analytics Add-on (Default)", quantity: 1, unitPrice: 250.00, amount: 250.00 }
+      ],
+      createdAt: "2026-09-30T09:00:00Z"
+    },
+    {
+      id: "INV-2026-0003",
+      invoiceNumber: "INV-2026-0003",
+      subscriptionId: "SUB-2026-0001",
+      customerId: "usr_cust_01",
+      customerName: "David Sterling",
+      customerEmail: "customer1@apexretail.com",
+      company: "Apex Retail Group",
+      billingAddress: "450 Broadway Ave, Suite 1200, New York, NY 10013",
+      status: "Confirmed", // Partially paid
+      issueDate: "2026-10-01",
+      dueDate: "2026-11-01",
+      paymentTerms: "Net 30",
+      periodStart: "2026-10-01",
+      periodEnd: "2026-11-01",
+      subtotal: 10000.00,
+      discountAmount: 1500.00,
+      discountCode: "VOLUME15",
+      taxRate: 8.25,
+      taxAmount: 701.25,
+      totalAmount: 9201.25,
+      amountPaid: 4500.00,
+      balanceDue: 4701.25,
+      lines: [
+        { description: "Quarterly Professional Services & Custom Odoo Migration", quantity: 1, unitPrice: 10000.00, amount: 10000.00 }
+      ],
+      createdAt: "2026-10-01T08:00:00Z"
+    }
+  ],
+
+  payments: [
+    {
+      id: "PAY-2026-0001",
+      invoiceId: "INV-2026-0001",
+      invoiceNumber: "INV-2026-0001",
+      customerId: "usr_cust_01",
+      customerName: "David Sterling",
+      amount: 25947.53,
+      method: "Bank Transfer", // Bank Transfer, Credit Card, ACH, Cash, UPI
+      date: "2026-01-20",
+      referenceNote: "Wire confirmation #JPMC-8839218-NY",
+      createdAt: "2026-01-20T14:30:00Z"
+    },
+    {
+      id: "PAY-2026-0002",
+      invoiceId: "INV-2026-0003",
+      invoiceNumber: "INV-2026-0003",
+      customerId: "usr_cust_01",
+      customerName: "David Sterling",
+      amount: 4500.00,
+      method: "Credit Card",
+      date: "2026-10-10",
+      referenceNote: "Visa corporate ending in 4092 - Auth 99421",
+      createdAt: "2026-10-10T11:15:00Z"
+    }
+  ],
+
+  passwordResetTokens: []
+};
